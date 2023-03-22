@@ -2,14 +2,14 @@
 name = "chi-chan"
 version = "0.1.0"
 edition = "2021"
-publish = false
+publish = true
 
 [lib]
 
 [dependencies]
 shuttle-service = { version = "0.11.0", features = ["bot-serenity"] }
 anyhow = "1.0.69"
-serenity = { version = "0.11", default-features = true, features = [ "client", "gateway", "rustls_backend", "model"] }
+serenity = { version = "0.11", default-features = true, features = ["client", "gateway", "rustls_backend", "model"] }
 shuttle-secrets = "0.11.0"
 tracing = "0.1.37"
 reqwest = "0.11.15"

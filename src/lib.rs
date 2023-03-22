@@ -65,7 +65,7 @@ async fn serenity(
         return Err(anyhow!("'DISCORD_TOKEN' was not found").into());
     };
 
-    let framework = StandardFramework::new().configure(|c| c.prefix("/")).group(&GENERAL_GROUP);
+    let framework = StandardFramework::new().configure(|c| c.prefix("?")).group(&GENERAL_GROUP);
     let intents = GatewayIntents::GUILD_MESSAGES | GatewayIntents::MESSAGE_CONTENT;
     let mut client = Client::builder(&token, intents)
         .event_handler(Handler)
